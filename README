@@ -1,40 +1,40 @@
-                            //  yaahc  //
+                            //  YaAHC  //
 
                  yet another adaptive huffman coding
 
 
     ~ What is adaptive huffman coding?
 
-      Adaptive Huffman coding is an adaptive coding technique based on
-      Huffman coding. It permits building the code as the symbols are
-      being transmitted, having no initial knowledge of source distribution,
-      that allows one-pass encoding and adaptation to changing conditions in
-      data.
+      Adaptive Huffman coding is an adaptive coding technique based
+      on Huffman coding. It permits building the code as the symbols
+      are being transmitted, having no initial knowledge of source
+      distribution, that allows one-pass encoding and adaptation to
+      changing conditions in data.
 
 
-    ~ What is yaahc?
+    ~ What is YaAHC?
 
-      yaahc is an easy C++ library that implements FGK algorithm of the
-      adaptive huffman coding. The library was implemented special for
-      university course of the compressing algorithms.
+      YaAHC is an easy C++ library that implements FGK algorithm
+      of the adaptive huffman coding. The library was implemented
+      special for university course of the compressing algorithms.
 
 
     ~ How to build?
 
-      The library use the CMake tool for generating makefile. So you
-      should do following commands:
+      The library use the CMake tool for generating makefile.
+      So you should do the following commands:
 
         $ mkdir build/ && cd build/
         $ cmake ../
         $ make
 
-      If you want to build tests, you should replace second command with next
-      line:
+      If you want to build tests, you should replace second
+      command with the next line:
 
         $ cmake ../ -DBUILD_TESTS=1
 
-      Make sure Boost Testing Framework was installed before. Now you can
-      run tests with following command:
+      Make sure Boost Testing Framework was installed before.
+      Now you can run tests with the following command:
 
         $ make tests
 
