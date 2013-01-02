@@ -84,9 +84,9 @@ void compress(std::istream& in, std::ostream& out)
     {
         extra_bits = 8 - w_buffer.size() % 8;
         std::fill_n(std::back_inserter(w_buffer), extra_bits, 0);
-        flush_buffer(w_buffer, out);
     }
 
+    flush_buffer(w_buffer, out);
     out.write(reinterpret_cast<char*>(&extra_bits), 1);
 }
 
