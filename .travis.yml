@@ -1,8 +1,9 @@
 language: cpp
 
 compiler:
-    - gcc
     - clang
+    #- gcc
+    # travis use gcc 4.6 which currently doesn't support override keyword
 
 before_install:
     - sudo apt-get update -qq
