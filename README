@@ -2,6 +2,8 @@
 
                  yet another adaptive huffman coding
 
+                          by Igor Kalnitsky
+
 
     ~ What is adaptive huffman coding?
 
@@ -24,21 +26,20 @@
       The library use the CMake tool for generating makefile.
       So you should do the following commands:
 
-        $ mkdir build/ && cd build/
-        $ cmake ../
-        $ make
+          $ mkdir build/ && cd build/
+          $ cmake ../ -DCMAKE_BUILD_TYPE=Release
+          $ make
 
       If you want to build tests, you should replace second
       command with the next line:
 
-        $ cmake ../ -DBUILD_TESTS=1
+          $ cmake ../ -DBUILD_TESTS=1
 
       Make sure Boost Testing Framework was installed before.
       Now you can run tests with the following command:
 
-        $ make tests
+          $ make tests
 
+      Use `-DBUILD_SAMPLES=1` flag for building samples:
 
-    ~ Credits...
-
-      This library was designed by Igor Kalnitsky <igor@kalnitsky.org>
+          $ cmake ../ -DBUILD_SAMPLES=1
