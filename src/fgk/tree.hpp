@@ -38,7 +38,7 @@ namespace fgk
  * Contains original byte, node weight and pointers to the relative nodes.
  * Also contains a number which used for fast-access to the nodes.
  */
-class Node;
+struct Node;
 
 
 /*!

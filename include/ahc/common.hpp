@@ -28,13 +28,13 @@ namespace ahc
 /*!
  * A byte type declaration.
  */
-typedef std::uint8_t byte_t;
+typedef std::uint_fast8_t byte_t;
 
 /*!
  * A bit type declaration. Yep, I know it's not a really bit.
  * This type was introduced special for better code readability.
  */
-typedef std::uint8_t bit_t;
+typedef std::uint_fast8_t bit_t;
 
 } // namespace ahc
 
