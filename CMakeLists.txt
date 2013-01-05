@@ -62,3 +62,28 @@ endif (BUILD_TESTS)
 if (BUILD_SAMPLES)
     add_subdirectory (samples/)
 endif (BUILD_SAMPLES)
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#  cpack settings
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+set (CPACK_GENERATOR "DEB")
+set (CPACK_DEBIAN_PACKAGE_MAINTAINER "Igor Kalnitsky")
+
+set (CPACK_PACKAGE_VERSION_MAJOR "0")
+set (CPACK_PACKAGE_VERSION_MINOR "1")
+set (CPACK_PACKAGE_VERSION_PATCH "0")
+
+set (CPACK_PACKAGE_VENDOR "Igor Kalnitsky")
+set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README")
+set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+
+set (CPACK_PACKAGE_DESCRIPTION_SUMMARY
+    "Yet another Adaptive Huffman Coding
+     YaAHC is an easy C++ library that implements FGK algorithm
+     of the adaptive huffman coding. The library was implemented
+     special for university course of the compressing algorithms."
+)
+
+include (CPack)
