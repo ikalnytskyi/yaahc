@@ -30,16 +30,16 @@
           $ cmake ../ -DCMAKE_BUILD_TYPE=Release
           $ make
 
-      If you want to build tests, you should replace second
-      command with the next line:
+      If you want to build tests, you should use `BUILD_TESTS` option.
+      For instance:
 
-          $ cmake ../ -DBUILD_TESTS=1
+          $ cmake ../ -DBUILD_TESTS=ON
 
-      Make sure Boost Testing Framework was installed before.
-      Now you can run tests with the following command:
+      Make sure Boost Testing Framework was installed before. The tests
+      can be run with the following command:
 
           $ make tests
 
-      Use `-DBUILD_SAMPLES=1` flag for building samples:
+      BTW, you can build samples with the `BUILD_SAMPLES` flag.
 
-          $ cmake ../ -DBUILD_SAMPLES=1
+          $ cmake ../ -DBUILD_SAMPLES=ON
