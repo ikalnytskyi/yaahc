@@ -31,3 +31,17 @@ set (SOURCES
 )
 
 add_library (${PROJECT_NAME} SHARED ${SOURCES})
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#   install library
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# install headers
+install (DIRECTORY "${YAAHC_INCLUDE}/ahc"
+    DESTINATION     include
+)
+
+# install library
+install (TARGETS ${PROJECT_NAME}
+    LIBRARY         DESTINATION     lib
+)
