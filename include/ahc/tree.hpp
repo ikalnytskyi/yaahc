@@ -39,7 +39,7 @@ class ITree;
  * The algorithm type.
  * Just FGK (Faller-Gallager-Knuth) algorithm supports now.
  */
-enum algorithm_t { FGK };
+enum class Algorithm : byte_t { FGK };
 
 
 /*!
@@ -54,7 +54,7 @@ enum algorithm_t { FGK };
 class DLL_PUBLIC Tree
 {
 public:
-    Tree (algorithm_t algorithm_type = FGK);
+    Tree (Algorithm algorithm_type = Algorithm::FGK);
     ~Tree();
 
     std::vector<bit_t> encode(byte_t byte);

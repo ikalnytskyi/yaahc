@@ -25,11 +25,11 @@
 namespace ahc
 {
 
-Tree::Tree(algorithm_t algorithm_type)
+Tree::Tree(Algorithm algorithm_type)
 {
     switch (algorithm_type)
     {
-    case FGK:
+    case Algorithm::FGK:
         _impl.reset(new fgk::Tree);
     }
 }
