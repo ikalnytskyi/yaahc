@@ -18,7 +18,7 @@
 
       YaAHC is an easy C++ library that implements FGK algorithm
       of the adaptive huffman coding. The library was implemented
-      special for university course of the compressing algorithms.
+      especially for university course of the compressing algorithms.
 
 
     ~ How to build?
