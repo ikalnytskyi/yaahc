@@ -43,7 +43,7 @@ struct Node
          int weight_ = 0,
          Node* parent_ = nullptr,
          Node* left_ = nullptr,
-         Node* right_ = nullptr)
+         Node* right_ = nullptr) noexcept
         : byte(byte_)
         , number(number_)
         , weight(weight_)

@@ -50,10 +50,10 @@ class Tree : public ITree
     static const size_t MAX_NODES = 2 * (MAX_BYTES + 1);
 
 public:
-    Tree();
+    Tree() noexcept;
 
-    std::vector<bit_t> encode(byte_t byte) override;
-    std::vector<byte_t> decode(const std::vector<bit_t>& code) override;
+    std::vector<bit_t> encode(byte_t byte) noexcept override;
+    std::vector<byte_t> decode(const std::vector<bit_t>& code) noexcept override;
 
 private:
     Node* _escape;                 //! a pointer to the special escape node
@@ -65,11 +65,11 @@ private:
 
     // internal methods
     // descriptions provides in .cpp file
-    std::vector<bit_t> get_code(const Node* node) const;
-    void add_new_byte(byte_t byte);
-    void update_tree(Node* node);
-    void exchange(Node* a, Node* b);
-    Node* highest_node(Node* node) const;
+    std::vector<bit_t> get_code(const Node* node) const noexcept;
+    void add_new_byte(byte_t byte) noexcept;
+    void update_tree(Node* node) noexcept;
+    void exchange(Node* a, Node* b) noexcept;
+    Node* highest_node(Node* node) const noexcept;
 };
 
 

@@ -54,11 +54,11 @@ enum class Algorithm : byte_t { FGK };
 class DLL_PUBLIC Tree
 {
 public:
-    Tree (Algorithm algorithm_type = Algorithm::FGK);
-    ~Tree();
+    Tree (Algorithm algorithm_type = Algorithm::FGK) noexcept;
+    ~Tree() noexcept;
 
-    std::vector<bit_t> encode(byte_t byte);
-    std::vector<byte_t> decode(const std::vector<bit_t>& bits);
+    std::vector<bit_t> encode(byte_t byte) noexcept;
+    std::vector<byte_t> decode(const std::vector<bit_t>& bits) noexcept;
 
 private:
     // a pimpl idiom, which very useful for libraries

@@ -25,7 +25,7 @@
 namespace ahc
 {
 
-Tree::Tree(Algorithm algorithm_type)
+Tree::Tree(Algorithm algorithm_type) noexcept
 {
     switch (algorithm_type)
     {
@@ -35,17 +35,17 @@ Tree::Tree(Algorithm algorithm_type)
 }
 
 
-Tree::~Tree()
+Tree::~Tree() noexcept
 { }
 
 
-std::vector<bit_t> Tree::encode(byte_t byte)
+std::vector<bit_t> Tree::encode(byte_t byte) noexcept
 {
     return _impl->encode(byte);
 }
 
 
-std::vector<byte_t> Tree::decode(const std::vector<bit_t>& bits)
+std::vector<byte_t> Tree::decode(const std::vector<bit_t>& bits) noexcept
 {
     return _impl->decode(bits);
 }

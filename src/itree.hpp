@@ -34,8 +34,8 @@ namespace ahc
 class ITree
 {
 public:
-    virtual std::vector<bit_t> encode(byte_t byte) = 0;
-    virtual std::vector<byte_t> decode(const std::vector<bit_t>& bits) = 0;
+    virtual std::vector<bit_t> encode(byte_t byte) noexcept = 0;
+    virtual std::vector<byte_t> decode(const std::vector<bit_t>& bits) noexcept = 0;
     virtual ~ITree() = default;
 };
 

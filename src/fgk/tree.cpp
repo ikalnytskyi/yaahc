@@ -32,7 +32,7 @@ const size_t Tree::MAX_BYTES;
 const size_t Tree::MAX_NODES;
 
 
-Tree::Tree()
+Tree::Tree() noexcept
     : _escape(new Node(0, MAX_NODES))
     , _root(_escape)
     , _decoder(_root)
@@ -45,7 +45,7 @@ Tree::Tree()
 }
 
 
-std::vector<bit_t> Tree::encode(byte_t byte)
+std::vector<bit_t> Tree::encode(byte_t byte) noexcept
 {
     std::vector<bit_t> code;
 
@@ -69,7 +69,7 @@ std::vector<bit_t> Tree::encode(byte_t byte)
 }
 
 
-std::vector<byte_t> Tree::decode(const std::vector<bit_t>& code)
+std::vector<byte_t> Tree::decode(const std::vector<bit_t>& code) noexcept
 {
     std::vector<byte_t> result;
 
@@ -116,7 +116,7 @@ std::vector<byte_t> Tree::decode(const std::vector<bit_t>& code)
 }
 
 
-std::vector<byte_t> Tree::get_code(const Node* node) const
+std::vector<byte_t> Tree::get_code(const Node* node) const noexcept
 {
     // note: the left child represents as `1` bit
     //       while the `right` child -- `0` bit
@@ -130,7 +130,7 @@ std::vector<byte_t> Tree::get_code(const Node* node) const
 }
 
 
-void Tree::add_new_byte(byte_t byte)
+void Tree::add_new_byte(byte_t byte) noexcept
 {
     // create a node with data
     _escape->left  = new Node(byte, _escape->number - 1, 0, _escape);
@@ -147,7 +147,7 @@ void Tree::add_new_byte(byte_t byte)
 }
 
 
-void Tree::update_tree(Node* node)
+void Tree::update_tree(Node* node) noexcept
 {
     for (; node != nullptr; node = node->parent)
     {
@@ -158,7 +158,7 @@ void Tree::update_tree(Node* node)
 }
 
 
-void Tree::exchange(Node* a, Node* b)
+void Tree::exchange(Node* a, Node* b) noexcept
 {
     // avoid unnecessary and danger situations
     if (a == _root || b == _root || a == b || a->parent == b || b->parent == a)
@@ -180,7 +180,7 @@ void Tree::exchange(Node* a, Node* b)
 }
 
 
-Node* Tree::highest_node(Node* node) const
+Node* Tree::highest_node(Node* node) const noexcept
 {
     Node* highest = node;
 
