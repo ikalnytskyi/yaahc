@@ -66,14 +66,14 @@ void compress(std::istream& in, std::ostream& out)
         in.read(reinterpret_cast<char*>(r_buffer.data()), BUFFER_SIZE);
         size_t read_bytes = in.gcount();
 
-        // encode read bytes
+        // encode bytes read 
         for (size_t i = 0; i < read_bytes; ++i)
         {
             std::vector<bit_t> code = tree.encode(r_buffer[i]);
             std::copy(std::begin(code), std::end(code), std::back_inserter(w_buffer));
         }
 
-        // flush buffer if it almost fill
+        // flush buffer if it is almost filled
         if (w_buffer.size() >= 8 * BUFFER_SIZE)
             flush_buffer(w_buffer, out);
     }

@@ -160,7 +160,7 @@ void Tree::update_tree(Node* node) noexcept
 
 void Tree::exchange(Node* a, Node* b) noexcept
 {
-    // avoid unnecessary and danger situations
+    // avoid unnecessary and dangerous situations
     if (a == _root || b == _root || a == b || a->parent == b || b->parent == a)
         return;
 
