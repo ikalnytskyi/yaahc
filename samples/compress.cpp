@@ -58,7 +58,7 @@ void compress(std::istream& in, std::ostream& out)
     std::vector<byte_t> r_buffer(BUFFER_SIZE);
     std::vector<bit_t>  w_buffer;
 
-    ahc::Tree tree(ahc::FGK);
+    ahc::Tree tree(ahc::Algorithm::FGK);
     w_buffer.reserve(8 * BUFFER_SIZE + BUFFER_SIZE);
 
     while (in)
